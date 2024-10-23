@@ -1,0 +1,91 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br><br>
+
+  <ion-card>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/icon/duoc.jpg" alt="Slide 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/icon/duoc2.jpg" alt="Slide 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/icon/duoc3.jpeg" alt="Slide 3" />
+        </div>
+      </div>
+  
+      
+    </div>
+    
+  </ion-card>
+  <ion-content>
+
+
+    <ion-card >
+      <div>
+        <ion-card>
+          <img alt="Silhouette of mountains" src="assets/icon/calendario.jpg"/>
+          <ion-card-header>
+            <ion-card-title>Calendario</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Organizate y no te pierdas de nada!!
+          </ion-card-content>
+          <ion-button style="display: flex;" color="warning" (click)="ircalendario('tab2')">Vamos!</ion-button>
+        </ion-card>
+  
+        <ion-card>
+          <img alt="Silhouette of mountains" src="assets/icon/escaneoqr.png"/>
+          <ion-card-header>
+            <ion-card-title>QR asistencia</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            No olvides confirmar tu asistencia a clases!!
+          </ion-card-content>
+          <ion-button style="display: flex;" color="warning" (click)="irqr('tab3')">Vamos!</ion-button>
+        </ion-card>
+  
+        <ion-card>
+          <img alt="Silhouette of mountains" src="assets/icon/solicitudes.jpg" />
+          <ion-card-header>
+            <ion-card-title>Solicitudes</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Realiza solicitudes académicas en esta sección.
+          </ion-card-content>
+          <ion-button color="warning" style="display: flex;" (click)="irsolicitudes('tab4')">Vamos!</ion-button>
+        </ion-card>
+  
+        <ion-card>
+          <img alt="Silhouette of mountains" src="assets/icon/perfil.jpg" />
+          <ion-card-header>
+            <ion-card-title>Perfil</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Échale un ojo a tu información personal.
+          </ion-card-content>
+          <ion-button style="display: flex;" color="warning" (click)="irperfil('tab5')">Vamos!</ion-button>
+        </ion-card>
+      </div>
+    </ion-card>
+  </ion-content>
+
+
+
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

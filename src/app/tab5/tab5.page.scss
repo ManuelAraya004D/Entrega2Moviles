@@ -1,0 +1,15 @@
+ion-item{
+    --background: rgb(26, 25, 25);
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  .center-card {
+    width: 90%; /* Ajusta el tamaño del card si es necesario */
+    max-width: 500px; /* Limita el ancho del card */
+  }

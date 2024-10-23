@@ -1,0 +1,26 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ver Asistencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let asistencia of asistencias">
+    <ion-card-header>
+      <ion-card-title>Fecha: {{ asistencia.fecha }}</ion-card-title>
+      <p>Asignatura: {{ asistencia.asignaturaNombre }}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Estado: {{ asistencia.estado }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="asistencias.length === 0">
+    <ion-card-content>
+      <p>No hay asistencias registradas.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

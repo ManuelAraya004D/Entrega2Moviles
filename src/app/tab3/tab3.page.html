@@ -1,0 +1,51 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>
+      QR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  
+
+
+
+  <div>
+    <ion-card>
+      <br>
+      <h2 style="text-align: center; font-weight: bold;color: #000000;">Asignaturas</h2>
+      <div class="asignaturas-container">
+
+        <ion-card *ngFor="let asignatura of usuario.asignaturas" >
+          <ion-card-header>
+            <ion-card-title>{{ asignatura.nombre }}</ion-card-title>
+              
+          </ion-card-header>
+          <ion-card-content>
+            <img [src]="asignatura.foto" alt="{{ asignatura.nombre }}" style="width: 100%; height: auto;">
+            <p><strong><br>Profesor:</strong> {{ asignatura.profesor.nombre }}</p>
+            <p><strong>Email del profesor:</strong> {{ asignatura.profesor.email }}</p>
+            <ion-button expand="block"  (click)="irAsistencia(asignatura)" fill="solid" shape="round">
+              Registro
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-card>
+    <ion-button expand="block" fill="solid" color="primary" shape="round" style="margin: 10px;" (click)="VerAsistencia()">
+      Asistencia
+    </ion-button>
+  </div>
+
+
+
+</ion-content>

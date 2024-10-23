@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+
+  <div style="text-align: center;"> 
+    <ion-button (click)="generarQr()" shape="round" color="primary">
+      Generar QR
+    </ion-button>
+  </div>
+
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <h2>{{ asignatura?.nombre || 'Asignatura no disponible' }}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="asignatura?.foto" alt="{{ asignatura?.nombre }}" style="width: 100%; height: auto;">
+      <p><strong>Profesor:</strong> {{ asignatura?.profesor?.nombre || 'Profesor no disponible' }}</p>
+      <p><strong>Email del profesor:</strong> {{ asignatura?.profesor?.email || 'Email no disponible' }}</p>
+      <qrcode [qrdata]="qrdata" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center" *ngIf="fechaGenerada">
+    <ion-card-header>
+      <h2>Asistencia Generada!</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Detalles:</strong> {{ qrdata }}</p>
+      <p><strong>Fecha:</strong> {{ fechaGenerada }}</p>
+      <p><strong>Usuario:</strong> {{ usuario?.username || 'No disponible' }}</p>
+      <p><strong>RUT:</strong> {{ usuario?.rut || 'No disponible' }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

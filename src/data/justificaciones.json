@@ -1,0 +1,32 @@
+{
+    "justificaciones": [
+      {
+        "id": "1",
+        "profesorNombre": "Ana Martínez",
+        "fecha": "2024-10-22",
+        "asignatura": "Calidad de Software",
+        "descripcion": "Falta por razones personales"
+      },
+      {
+        "id": "2",
+        "profesorNombre": "Juan López",
+        "fecha": "2024-10-22",
+        "asignatura": "Ética",
+        "descripcion": "Enfermedad"
+      },
+      {
+        "id": "3",
+        "profesorNombre": "Carlos Díaz",
+        "fecha": "2024-10-22",
+        "asignatura": "Lenguaje",
+        "descripcion": "Cita médica"
+      },
+      {
+        "id": "4",
+        "profesorNombre": "María Gómez",
+        "fecha": "2024-10-23",
+        "asignatura": "Química",
+        "descripcion": "Compromisos familiares"
+      }
+    ]
+  }

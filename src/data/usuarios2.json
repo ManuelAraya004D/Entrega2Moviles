@@ -1,0 +1,58 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "Carls",
+      "apellido": "Palacios",
+      "password": "carlospalacios123",
+      "email": "ca.pala@duocuc.cl",
+      "rut": "18651342",
+      "isactive": true
+    },
+    {
+      "id": "2",
+      "username": "Juanaaas",
+      "apellido": "Perez",
+      "password": "juan123",
+      "email": "ju.pe@duocuc.cl",
+      "rut": "19651344",
+      "isactive": true
+    },
+    {
+      "id": "3",
+      "username": "Sebastian",
+      "apellido": "Clarence",
+      "email": "se.cla@duocuc.cl",
+      "password": "sebastian123",
+      "rut": "20651343",
+      "isactive": true
+    },
+    {
+      "id": "3b41",
+      "username": "Manuelsotee",
+      "apellido": "Arayass",
+      "password": "manu1234",
+      "email": "manu.arayaa@duocuc.cl",
+      "rut": "214703167",
+      "isactive": true
+    },
+    {
+      "id": "1158",
+      "username": "prueba",
+      "apellido": "prueba",
+      "email": "prueba@duocuc.cl",
+      "password": "prueba123",
+      "rut": "32465465k",
+      "isactive": true
+    },
+    {
+      "id": "63c4",
+      "username": "Martin",
+      "apellido": "Ibarra",
+      "email": "martin@gmail.com",
+      "password": "Martin123",
+      "rut": "21805806-k",
+      "isactive": true
+    }
+  ]
+}

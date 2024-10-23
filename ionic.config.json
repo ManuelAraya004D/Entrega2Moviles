@@ -1,0 +1,7 @@
+{
+  "name": "VistaEstudiante",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

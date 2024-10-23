@@ -1,0 +1,67 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item style="color: black;">
+        <ion-label position="stacked">Nombre: </ion-label>
+        <ion-input type="text" placeholder="Ingrese su nombre" name="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item style="color: black;" >
+        <ion-label position="stacked">Apellido: </ion-label>
+        <ion-input type="text" placeholder="Ingrese su apellido" name="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item  style="color: black;">
+        <ion-label position="stacked">Contraseña: </ion-label>
+        <ion-input type="password" placeholder="Ingrese su password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="stacked">Contraseña: </ion-label>
+        <ion-input type="password" placeholder="Confirme su contraseña" name="password2"></ion-input>
+      </ion-item>
+
+
+    </ion-card-content>
+
+    <div style="text-align: center;">
+      <ion-button (click)="confirmarregistro()" fill="solid" shape="round" color="light"  style="padding-bottom: 15px;" >
+        Registrarse
+      </ion-button>
+     
+    </div>
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>DuocUC</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

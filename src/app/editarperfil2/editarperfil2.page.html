@@ -1,0 +1,64 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  <ion-card style="width: 92%; max-width: 500px;">
+    <ion-card-header>
+      <ion-card-title>Actualizar Información del Usuario</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <form style="margin-top: 20px;">
+
+
+
+        <ion-item>
+          <ion-input type="text" name="username" label="Nombre:" 
+            labelPlacement="floating" [(ngModel)]="usuario.username">
+          </ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+          <ion-input type="text" name="apellido" label="Apellido:" 
+            labelPlacement="floating" [(ngModel)]="usuario.apellido">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="email" name="email" label="Email:" 
+            labelPlacement="floating" [(ngModel)]="usuario.email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" name="rut" label="Email:" 
+            labelPlacement="floating" [(ngModel)]="usuario.rut">
+          </ion-input>
+        </ion-item>
+
+
+
+
+        <div style="text-align: center; margin-top: 30px;">
+          <ion-button (click)="updateUsuario()" expand="full" color="primary" 
+            shape="round" style="font-weight: bold; text-transform: uppercase;">
+            Actualizar
+          </ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+  
+</ion-content>

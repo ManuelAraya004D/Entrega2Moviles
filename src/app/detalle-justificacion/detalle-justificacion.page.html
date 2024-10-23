@@ -1,0 +1,78 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title >
+      Detalle justificacion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content [fullscreen]="true" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  <ion-card style="width: 90%; max-width: 500px;">
+    <ion-card-header>
+      <ion-card-title>Actualizar Información de inasistencias</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <form style="margin-top: 20px;">
+        <ion-item>
+          <ion-input
+            type="text"
+            name="asignaturaNombre"
+            label="Asignatura:"
+            labelPlacement="floating"
+            [(ngModel)]="justificacion.asignaturaNombre">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            type="text"
+            name="profesorNombre"
+            label="Profesor:"
+            labelPlacement="floating"
+            [(ngModel)]="justificacion.profesorNombre">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            type="text"
+            name="fecha"
+            label="Fecha:"
+            labelPlacement="floating"
+            [(ngModel)]="justificacion.fecha">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            type="text"
+            name="motivo"
+            label="Motivo:"
+            labelPlacement="floating"
+            [(ngModel)]="justificacion.motivo">
+          </ion-input>
+        </ion-item>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <ion-button (click)="updateJustificacion()" expand="full" color="primary" 
+            shape="round" style="font-weight: bold; text-transform: uppercase;">
+            Actualizar
+          </ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

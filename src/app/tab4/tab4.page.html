@@ -1,0 +1,24 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Justificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngIf="justificaciones.length > 0">
+    <ion-item *ngFor="let justificacion of justificaciones">
+      <ion-label>
+        <h2>{{ justificacion.asignaturaNombre }}</h2>
+        <p>Profesor: {{ justificacion.profesorNombre }}</p>
+        <p>Fecha: {{ justificacion.fecha }}</p>
+        <p>Motivo: {{ justificacion.descripcion }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item *ngIf="justificaciones.length === 0">
+    <ion-label>No hay justificaciones disponibles.</ion-label>
+  </ion-item>
+</ion-content>

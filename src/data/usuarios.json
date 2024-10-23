@@ -1,0 +1,111 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "Carlos",
+      "apellido": "Palacios",
+      "password": "carlospalacios123",
+      "email": "ca.pala@duocuc.cl",
+      "rut": "18651342",
+      "isactive": true,
+      "asignaturas": [
+        {
+          "id": "101",
+          "nombre": "Calidad de Software",
+          "foto": "assets/icon/calidad.jpg",
+          "profesor": {
+            "nombre": "Ana Martínez",
+            "email": "ana.martinez@duocuc.cl"
+          },
+          "asistencias": [
+            {
+              "fecha": "2024-10-23",
+              "estado": "presente",
+              "asignaturaNombre": "Calidad de Software"
+            }
+          ]
+        },
+        {
+          "id": "102",
+          "nombre": "Etica",
+          "foto": "assets/icon/etica.jpg",
+          "profesor": {
+            "nombre": "Juan López",
+            "email": "juan.lopez@duocuc.cl"
+          },
+          "asistencias": [
+            {
+              "fecha": "2024-10-22",
+              "estado": "ausente",
+              "asignaturaNombre": "Etica"
+            }
+          ]
+        }
+      ],
+      "justificacion": [
+        {
+          "id": "200",
+          "profesorNombre": "Ana Martínez",
+          "fecha": "2024-10-22",
+          "asignatura": "Calidad de Software",
+          "descripcion": "Falta por razones personales"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "Juan",
+      "apellido": "Perez",
+      "password": "juan123",
+      "email": "ju.pe@duocuc.cl",
+      "rut": "19651344",
+      "isactive": true,
+      "asignaturas": [
+        {
+          "id": "103",
+          "nombre": "Lenguaje",
+          "profesor": {
+            "nombre": "Carlos Díaz",
+            "email": "carlos.diaz@duocuc.cl"
+          },
+          "foto": "assets/icon/lenguaje.jpg",
+          "asistencias": []
+        },
+        {
+          "id": "104",
+          "nombre": "Química",
+          "profesor": {
+            "nombre": "María Gómez",
+            "email": "maria.gomez@duocuc.cl"
+          },
+          "foto": "assets/icon/quimica.jpg",
+          "asistencias": [
+            {
+              "fecha": "2024-10-22",
+              "estado": "presente",
+              "asignaturaNombre": "Química"
+            }
+          ]
+        }
+      ],
+      "justificacion": [
+        {
+          "id": "201",
+          "profesorNombre": "María Gómez",
+          "fecha": "2024-10-21",
+          "asignatura": "Química",
+          "descripcion": "Cita médica"
+        }
+      ]
+    },
+    {
+      "id": "f86b",
+      "username": "Prueba123",
+      "apellido": "Prueba1234",
+      "email": "prueba@duocuc.cl",
+      "password": "prueba123",
+      "rut": "32454324k",
+      "isactive": true
+    }
+  ]
+}

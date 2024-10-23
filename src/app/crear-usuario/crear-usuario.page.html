@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>crearUsuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">crear Usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <form [formGroup]="registroForm">
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nombre de usuario.." formControlName="username"
+       label="Username:" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('username')?.invalid && (registroForm.get('username')?.dirty || registroForm.get('username')?.touched)">
+
+      <div id="alerta" *ngIf="registroForm.get('username')?.hasError('required')">
+        El nombre de usuario es obligatorio
+      </div>
+
+      <div id="alerta" *ngIf="registroForm.get('username')?.hasError('minlenght')">
+        El usuario debe tener minimo 3 caracteres
+      </div>
+
+    </div>
+
+    <ion-item>
+      <ion-input type="text" formControlName="apellido" label="Apellido:" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('apellido')?.invalid && (registroForm.get('apellido')?.dirty || registroForm.get('apellido')?.touched)">
+
+      <div id="alerta" *ngIf="registroForm.get('apellido')?.hasError('required')">
+        El campo de apellido es obligatorio
+      </div>
+
+      <div id="alerta" *ngIf="registroForm.get('apellido')?.hasError('minlenght')">
+        La apellido debe tener minimo 3 caracteres
+      </div>
+
+    </div>
+
+
+    <ion-item>
+      <ion-input type="text" formControlName="rut" label="Rut:" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('rut')?.invalid && (registroForm.get('rut')?.dirty || registroForm.get('rut')?.touched)">
+
+      <div id="alerta" *ngIf="registroForm.get('rut')?.hasError('required')">
+        El campo de rut es obligatorio
+      </div>
+
+      <div id="alerta" *ngIf="registroForm.get('apellido')?.hasError('minlenght')">
+        La apellido debe tener minimo 3 caracteres
+      </div>
+
+    </div>
+
+    <ion-item>
+      <ion-input type="email" placeholder="email..." formControlName="email"
+       label="Email:" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('email')?.invalid && (registroForm.get('email')?.dirty || registroForm.get('email')?.touched)">
+
+      <div id="alerta" *ngIf="registroForm.get('email')?.hasError('required')">
+        El email es obligatorio
+      </div>
+
+      <div id="alerta" *ngIf="registroForm.get('email')?.hasError('email')">
+        Tipo de email no admitido
+      </div>
+
+    </div>
+
+
+    <ion-item>
+      <ion-input type="password" formControlName="password" label="Contraseña:" labelPlacement="floating"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('password')?.invalid && (registroForm.get('password')?.dirty || registroForm.get('password')?.touched)">
+
+      <div id="alerta" *ngIf="registroForm.get('password')?.hasError('required')">
+        El campo de contraseña es obligatorio
+      </div>
+
+      <div id="alerta" *ngIf="registroForm.get('password')?.hasError('pattern')">
+        La contraseña debe tener minimo 6 caracteres: al menos una letra y un número. Ejemplo: Contraseña123
+      </div>
+
+    </div>
+
+    <div style="text-align: center;margin-top: 30px;">
+      <ion-button (click)="crearUsuario()" [disabled]="!registroForm.valid"  shape="round">
+        Registrarse
+      </ion-button>
+    </div>
+
+    
+
+  </form>
+
+</ion-content>

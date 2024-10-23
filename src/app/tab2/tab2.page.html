@@ -1,0 +1,138 @@
+<ion-header [translucent]="true" style="background: #000000;">
+  <ion-toolbar>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title >
+      Calendario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: calc(100% - 16px);">
+   <ion-card>
+    <div style="margin-top: 16px;">
+      <ion-datetime></ion-datetime>
+    </div>
+   </ion-card>
+
+  </div>
+  
+
+
+
+
+  
+
+
+
+
+
+  <div style="margin-top: -200px;">
+    <ion-card>
+      <ion-list [inset]="true">
+        <ion-item [button]="true">
+          <ion-icon color="danger" slot="start" name="list-circle" size="large"></ion-icon>
+          <ion-label>Avisos</ion-label>
+          <ion-note slot="end">6</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-icon color="tertiary" slot="start" name="list-circle" size="large"></ion-icon>
+          <ion-label>Recordatorios</ion-label>
+          <ion-note slot="end">15</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-icon color="success" slot="start" name="list-circle" size="large"></ion-icon>
+          <ion-label>Tareas completadas</ion-label>
+          <ion-note slot="end">3</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
+          <ion-label>Solicitudes</ion-label>
+          <ion-note slot="end">2</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+    
+    <ion-card>
+      <ion-list [inset]="true">
+
+
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start">
+            <div class="unread-indicator"></div>
+          </div>
+          <ion-label>
+            <strong>Programación Aplicaciones Móviles</strong> <br>
+            <ion-text> Indicaciones para primera entrega</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">
+              Vistas front end de la aplicación según caso elegido......
+            </ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">10:11</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+  
+  
+  
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start"></div>
+          <ion-label>
+            <strong>Arquitectura</strong><br>
+            <ion-text>Avances casos de uso</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">Espero esten bien muchachos recuerden
+             traer...</ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">04:44</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+  
+  
+  
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start">
+            <div class="unread-indicator"></div>
+          </div>
+          <ion-label>
+            <strong>Calidad de software</strong><br>
+            <ion-text>Test en python</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">
+              recuerden que es en parejas...
+            </ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">Ayer</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start"></div>
+          <ion-label>
+            <strong>Ingles</strong><br>
+            <ion-text>Oral test 10 september</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">Remember the content!!!</ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">Ayer</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+    
+  </div>
+
+  
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>
